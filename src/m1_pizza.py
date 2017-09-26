@@ -6,8 +6,8 @@ This module lets you practice:
   -- CALLING functions
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Derek Grayless.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 import math
@@ -90,6 +90,11 @@ def generate_points_on_circle(circle_for_points,
     radius = circle_for_points.radius
     center_x = circle_for_points.center.x
     center_y = circle_for_points.center.y
+    x = []
+    for k in range(number_of_points_to_generate):
+        x = x + rg.Point(center_x + delta_degrees, center_y - delta_degrees)
+
+
 
     # ------------------------------------------------------------------
     # Each point is   delta_degrees   from the previous point,
