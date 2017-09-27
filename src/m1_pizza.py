@@ -17,7 +17,7 @@ def main():
     """ Calls the   TEST   functions in this module. """
     run_test_generate_points_on_circle()
     run_test_draw_points_on_circle()
-    #run_test_pizza()
+    run_test_pizza()
     #run_test_polygon()
     #run_test_fancy_polygon()
 
@@ -295,6 +295,14 @@ def run_test_pizza():
     #     -- on a yellow-filled circle.
     # ------------------------------------------------------------------
 
+    # Test 4:
+    title = 'PIZZA test 4:  3 slices, thin (thickness=5) red lines.'
+    window = rg.RoseWindow(400, 400, title)
+    circle = rg.Circle(rg.Point(200, 200), 150)
+    circle.outline_thickness = 5
+    pizza(window, circle, 3, 'red', 5)
+    window.close_on_mouse_click()
+
 
 def pizza(window, circle, number_of_slices, color, thickness):
     """
@@ -334,6 +342,21 @@ def pizza(window, circle, number_of_slices, color, thickness):
     #    (defined above) to generate the relevant points,
     #    and then draw lines that are based in part on those points.
     # ------------------------------------------------------------------
+
+    circle.attach_to(window)
+    center = circle.center
+
+
+    points = generate_points_on_circle(circle, number_of_slices)
+
+    for k in range(len(points)):
+        line1 = rg.Line(points[k], rg.Point(center.x, center.y))
+        line1.thickness = thickness
+        line1.color = color
+        line1.attach_to(window)
+
+    window.render()
+
 
 
 def run_test_polygon():
