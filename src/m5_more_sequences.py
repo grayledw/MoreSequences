@@ -75,7 +75,7 @@ def sum_radii(circles):
       :type circles:  list[rg.Circle]    or tuple(rg.Circle)
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # Note: No fair using "slices" on ANY of these problems,
@@ -86,6 +86,11 @@ def sum_radii(circles):
     #
     #       Instead, use explicit loops, as you have for other problems.
     # ------------------------------------------------------------------
+
+    total = 0
+    for k in range(len(circles)):
+        total = total + circles[k].radius
+    return total
 
 
 # ----------------------------------------------------------------------
