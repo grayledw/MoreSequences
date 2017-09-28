@@ -394,7 +394,7 @@ def rectangles_from_circles(circles):
       :type circles:  list[rg.Circle]    or tuple(rg.Circle)
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # Done: 9. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     ####################################################################
