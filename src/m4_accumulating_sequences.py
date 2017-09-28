@@ -16,7 +16,7 @@ def main():
     run_test_make_simple_list()
     run_test_make_simple_string()
     run_test_make_less_simple_string()
-    #run_test_draw_shapes()
+    run_test_draw_shapes()
     #run_test_rectangles_from_circles()
 
 
@@ -278,7 +278,7 @@ def draw_shapes(shapes, window):
       :type window:  rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # Done: 8. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     ####################################################################
@@ -289,6 +289,10 @@ def draw_shapes(shapes, window):
     # FWIW: The word for ideas like this is "polymorphism".
     ####################################################################
     # ------------------------------------------------------------------
+
+    for k in range(len(shapes)):
+        shapes[k].attach_to(window)
+    window.render(.3)
 
 
 def run_test_rectangles_from_circles():
@@ -402,6 +406,8 @@ def rectangles_from_circles(circles):
     ####################################################################
     # ------------------------------------------------------------------
 
+    for k in range(len(circles)):
+        rectangle = rg.Rectangle()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
