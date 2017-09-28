@@ -158,6 +158,12 @@ def count_last_n_odds(integers, n):
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
 
+    total = 0
+    for k in range(len(integers)):
+        if integers[k] == 0:
+            total = total + 1
+    return total
+
 
 # ----------------------------------------------------------------------
 # Some problems iterate (loop) through PART of the sequence,

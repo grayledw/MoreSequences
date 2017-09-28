@@ -17,7 +17,7 @@ def main():
     run_test_make_simple_string()
     run_test_make_less_simple_string()
     run_test_draw_shapes()
-    #run_test_rectangles_from_circles()
+    run_test_rectangles_from_circles()
 
 
 def run_test_make_simple_list():
@@ -406,8 +406,16 @@ def rectangles_from_circles(circles):
     ####################################################################
     # ------------------------------------------------------------------
 
+    rectangles = []
     for k in range(len(circles)):
-        rectangle = rg.Rectangle()
+        c = circles[k].center
+        x1 = c.x + circles[k].radius
+        y1 = c.y + circles[k].radius
+        x2 = c.x - circles[k].radius
+        y2 = c.y - circles[k].radius
+        rectangle = rg.Rectangle(rg.Point(x1, y1), rg.Point(x2, y2))
+        rectangles = rectangles + [rectangle]
+    return rectangles
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
