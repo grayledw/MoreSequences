@@ -312,7 +312,7 @@ def contains_an_a(s):
     # ------------------------------------------------------------------
 
     for k in str(len(s)):
-        if (s[k]) == 'a':
+        if (s(k)) == 'a':
             return True
         else:
             return False
