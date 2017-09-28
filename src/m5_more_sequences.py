@@ -311,8 +311,11 @@ def contains_an_a(s):
     #   No fair using the   count   or   find   string methods.
     # ------------------------------------------------------------------
 
-    #for k in range(len(s)):
-        #if s
+    for k in str(len(s)):
+        if (s[k]) == 'a':
+            return True
+        else:
+            return False
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
